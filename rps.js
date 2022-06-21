@@ -19,16 +19,8 @@ function compRoundWin() {
 function addScore(choice, computerChoice) {
   console.log(`You chose ${choice}. | Computer chose ${computerChoice}.`)
   if ((choice === 'rock' && computerChoice === 'scissors') ||
-     (choice === 'rock' && computerChoice === 'lizard') ||
      (choice === 'paper' && computerChoice === 'rock') ||
-     (choice === 'paper' && computerChoice === 'spock') ||
-     (choice === 'scissors' && computerChoice === 'paper') ||
-     (choice === 'scissors' && computerChoice === 'lizard') ||
-     (choice === 'lizard' && computerChoice === 'paper') ||
-     (choice === 'lizard' && computerChoice === 'spock') ||
-     (choice === 'spock' && computerChoice === 'rock') ||
-     (choice === 'spock' && computerChoice === 'scissors')){
-       
+     (choice === 'scissors' && computerChoice === 'paper')){
      return userRoundWin();
      } else if (choice === computerChoice) {
        return("It's a tie!");
@@ -50,8 +42,6 @@ while (true) {
   counter += 1;
   const readline = require('readline-sync');
   const VALID_CHOICES = ['rock', 'paper', 'scissors'];
-
-  console.log('Welcome!')
 
   console.log(`Choose one: ${VALID_CHOICES.join(', ')}.`);
   let choice = readline.question();
